@@ -1,6 +1,6 @@
-import { IExchangeRate } from "../models/IExchangeRate";
+import { IExchangeRates } from "../types/IExchangeRates";
 
-export const getExchangeRate = async () => {
+export const getExchangeRate = async (): Promise<IExchangeRates> => {
     if (!process.env.REACT_APP_API_KEY) {
         throw new Error("empty REACT_APP_API_KEY");
     }
@@ -13,5 +13,5 @@ export const getExchangeRate = async () => {
         }
     })
     const result = await response.json()
-    return result.response as IExchangeRate;
+    return result.response;
 }

@@ -1,6 +1,6 @@
-import { ICovidInfo } from "../models/ICovidInfo";
+import { ICovidInfo } from "../types/ICovidInfo";
 
-export const getCovidInfo = async () => {
+export const getCovidInfo = async (): Promise<ICovidInfo> => {
     if (!process.env.REACT_APP_API_KEY) {
         throw new Error("empty REACT_APP_API_KEY");
     }
@@ -13,5 +13,5 @@ export const getCovidInfo = async () => {
         }
     });
     const result = await response.json();
-    return result.data as ICovidInfo;
+    return result.data;
 }
