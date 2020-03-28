@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid, Container } from "@material-ui/core"
-import Covid from './Graphics/Covid';
-import Exchange from './Graphics/Exchange';
+import { Covid } from '../views/Covid';
+import { Exchange } from '../views/Exchange';
 
-const App = () => {
+export const App = () => {
   return (
     <Container maxWidth="lg">
       <Grid container spacing={3}>
@@ -16,5 +16,4 @@ const App = () => {
       </Grid>
     </Container>
   );
-}
-export default App;
+};

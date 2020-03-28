@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { ICovidStatistic } from '../../types/ICovidStatistic';
 import { getCovidInfo } from '../../api/covid';
 
-const useCovidHook = () => {
+export const useCovidHook = () => {
     const [covidInfoStatistic, setCovidInfoStatistic] = useState<ICovidStatistic[]>([])
 
     const fetchData = async () => {
@@ -32,4 +32,3 @@ const useCovidHook = () => {
     }
     return data;
 }
-export default useCovidHook;
