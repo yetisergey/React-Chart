@@ -2,7 +2,7 @@ import React from 'react';
 import { Chart, ArgumentAxis, ValueAxis, BarSeries, Legend } from "@devexpress/dx-react-chart-material-ui";
 import { Paper } from '@material-ui/core';
 import { Stack } from '@devexpress/dx-react-chart';
-import { useCovidHook } from '../Exchange/useCovidHook';
+import { useCovidHook } from './useCovidHook';
 
 const Covid = () => {
   const data = useCovidHook();
